@@ -1,0 +1,760 @@
+{
+  "name": "Transfermarkt Clubs",
+  "nodes": [
+    {
+      "parameters": {
+        "url": "=http://transfermarkt-api:8000/competitions/{{ $json.name }}/clubs",
+        "options": {}
+      },
+      "name": "Get Clubs",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [
+        2320,
+        -1632
+      ],
+      "id": "172d6b14-8e7f-44af-96a7-a8595326cf3b",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "maxTries": 5
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "name",
+              "value": "ARG1"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1440,
+        -1632
+      ],
+      "id": "990a7d81-bf47-4308-8e01-9c4710687ea1"
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "name",
+              "value": "BO1A"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1440,
+        -1504
+      ],
+      "id": "1f1c9ea9-2ba2-48d9-90f7-7911057f3590"
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "name",
+              "value": "COL1"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set2",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1440,
+        -1120
+      ],
+      "id": "9bba9b62-33ad-4e06-a678-0dc09ea637cc"
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "name",
+              "value": "BRA1"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set3",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1440,
+        -1376
+      ],
+      "id": "56ce0e85-372e-427a-86b5-dfa39fb24efc"
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "name",
+              "value": "EC1N"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set4",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1440,
+        -992
+      ],
+      "id": "e7f16b00-221a-49cd-bb18-b01f7876649b"
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "name",
+              "value": "CLPD"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set5",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1440,
+        -1248
+      ],
+      "id": "c19c9770-fe80-4974-801d-22d2ba820919"
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "name",
+              "value": "TDeC"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set6",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1440,
+        -736
+      ],
+      "id": "f1da8f2a-9abb-41e8-8de5-959a08137e49"
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "name",
+              "value": "PR1A"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set7",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1440,
+        -864
+      ],
+      "id": "7cbb567d-00e5-477c-a819-0019b6d914d4"
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "name",
+              "value": "VZ1A"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set8",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1440,
+        -480
+      ],
+      "id": "24fda826-1b23-4729-b4f8-5b1f685a68e9"
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "name",
+              "value": "URU1"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set9",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1440,
+        -608
+      ],
+      "id": "7f932ddf-ce4b-4564-9925-4ef554220605"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        464,
+        -576
+      ],
+      "id": "273af7b4-7a22-4103-bce4-bd1c1b869209",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "functionCode": "const items = [];\nconst competition_id = $json.id;\nfor (const club of $json.clubs) {\n  items.push({json: {club_id: club.id, club_name: club.name, competition_id: competition_id}});\n}\nreturn items;"
+      },
+      "name": "Prepare Data",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        2512,
+        -1632
+      ],
+      "id": "b341cbc3-de60-4ecc-9ba1-5a8fca689056"
+    },
+    {
+      "parameters": {
+        "operation": "upsert",
+        "schema": {
+          "__rl": true,
+          "value": "public",
+          "mode": "list",
+          "cachedResultName": "public"
+        },
+        "table": {
+          "__rl": true,
+          "value": "clubs",
+          "mode": "list",
+          "cachedResultName": "clubs"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "stadiumseats": "={{ $json.stadiumSeats ?? null }}",
+            "currenttransferrecord": "={{ $json.currentTransferRecord ?? null }}",
+            "currentmarketvalue": "={{ $json.currentMarketValue ?? null }}",
+            "squad_size": "={{ $json.squad.size ?? null }}",
+            "squad_averageage": "={{ $json.squad.averageAge ?? null }}",
+            "squad_foreigners": "={{ $json.squad.foreigners ?? null }}",
+            "squad_nationalteamplayers": "={{ $json.squad.nationalTeamPlayers ?? null }}",
+            "id": "={{ $json.id ?? $('Prepare Data').item.json.club_id}}",
+            "name": "={{ $json.name ?? $('Prepare Data').item.json.club_name}}",
+            "officialname": "={{ $json.officialName ?? '' }}",
+            "image": "={{ $json.image ?? '' }}",
+            "addressline1": "={{ $json.addressLine1 ?? '' }}",
+            "addressline2": "={{ $json.addressLine2 ?? '' }}",
+            "addressline3": "={{ $json.addressLine3 ?? '' }}",
+            "tel": "={{ $json.tel ?? '' }}",
+            "website": "={{ $json.website ?? '' }}",
+            "foundedon": "={{ $json.foundedOn ?? null }}",
+            "colors": "={{ $json.colors ?? [] }}",
+            "stadiumname": "={{ $json.stadiumName ?? '' }}",
+            "competition_id": "={{ $('Prepare Data').item.json.competition_id }}"
+          },
+          "matchingColumns": [
+            "id"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": true,
+              "defaultMatch": true,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "name",
+              "displayName": "name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false,
+              "removed": false
+            },
+            {
+              "id": "officialname",
+              "displayName": "officialname",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false,
+              "removed": false
+            },
+            {
+              "id": "image",
+              "displayName": "image",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false,
+              "removed": false
+            },
+            {
+              "id": "addressline1",
+              "displayName": "addressline1",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false,
+              "removed": false
+            },
+            {
+              "id": "addressline2",
+              "displayName": "addressline2",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false,
+              "removed": false
+            },
+            {
+              "id": "addressline3",
+              "displayName": "addressline3",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false,
+              "removed": false
+            },
+            {
+              "id": "tel",
+              "displayName": "tel",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false,
+              "removed": false
+            },
+            {
+              "id": "website",
+              "displayName": "website",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false,
+              "removed": false
+            },
+            {
+              "id": "foundedon",
+              "displayName": "foundedon",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "dateTime",
+              "canBeUsedToMatch": false,
+              "removed": false
+            },
+            {
+              "id": "colors",
+              "displayName": "colors",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "array",
+              "canBeUsedToMatch": false,
+              "removed": false
+            },
+            {
+              "id": "stadiumname",
+              "displayName": "stadiumname",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false,
+              "removed": false
+            },
+            {
+              "id": "stadiumseats",
+              "displayName": "stadiumseats",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": false,
+              "removed": false
+            },
+            {
+              "id": "currenttransferrecord",
+              "displayName": "currenttransferrecord",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": false,
+              "removed": false
+            },
+            {
+              "id": "currentmarketvalue",
+              "displayName": "currentmarketvalue",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": false,
+              "removed": false
+            },
+            {
+              "id": "squad_size",
+              "displayName": "squad_size",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": false,
+              "removed": false
+            },
+            {
+              "id": "squad_averageage",
+              "displayName": "squad_averageage",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": false,
+              "removed": false
+            },
+            {
+              "id": "squad_foreigners",
+              "displayName": "squad_foreigners",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": false,
+              "removed": false
+            },
+            {
+              "id": "squad_nationalteamplayers",
+              "displayName": "squad_nationalteamplayers",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": false,
+              "removed": false
+            },
+            {
+              "id": "competition_id",
+              "displayName": "competition_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        2944,
+        -1632
+      ],
+      "id": "64fd9f74-7f2a-4496-b779-2cde39083d5a",
+      "name": "Insert or update rows",
+      "credentials": {
+        "postgres": {
+          "id": "jD1w5rTprHQuWLao",
+          "name": "Postgres account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=http://transfermarkt-api:8000/clubs/{{ $json.club_id }}/profile",
+        "options": {}
+      },
+      "name": "Get market",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [
+        2720,
+        -1632
+      ],
+      "id": "8c685ba3-1ad8-4550-b9d7-56b30b5c0632",
+      "notesInFlow": false,
+      "alwaysOutputData": true,
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "onError": "continueRegularOutput"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Get Clubs": {
+      "main": [
+        [
+          {
+            "node": "Prepare Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Get Clubs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set1": {
+      "main": [
+        [
+          {
+            "node": "Get Clubs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set2": {
+      "main": [
+        [
+          {
+            "node": "Get Clubs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set3": {
+      "main": [
+        [
+          {
+            "node": "Get Clubs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set4": {
+      "main": [
+        [
+          {
+            "node": "Get Clubs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set5": {
+      "main": [
+        [
+          {
+            "node": "Get Clubs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set6": {
+      "main": [
+        [
+          {
+            "node": "Get Clubs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set7": {
+      "main": [
+        [
+          {
+            "node": "Get Clubs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set8": {
+      "main": [
+        [
+          {
+            "node": "Get Clubs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set9": {
+      "main": [
+        [
+          {
+            "node": "Get Clubs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Set8",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Set9",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Set6",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Set7",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Set4",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Set5",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Set2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Set3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Set1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Data": {
+      "main": [
+        [
+          {
+            "node": "Get market",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get market": {
+      "main": [
+        [
+          {
+            "node": "Insert or update rows",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "4a89c705-458f-4f60-ae50-3ec6abf52b63",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "558d88703fb65b2d0e44613bc35916258b0f0bf983c5d4730c00c424b77ca36a"
+  },
+  "id": "LrRiI5ojlcLC7OGu",
+  "tags": [
+    {
+      "createdAt": "2025-10-12T17:28:09.957Z",
+      "updatedAt": "2025-10-12T17:28:09.957Z",
+      "id": "SFaSoufnRsFt4SHC",
+      "name": "Update"
+    }
+  ]
+}
