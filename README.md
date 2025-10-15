@@ -1,5 +1,7 @@
 # Proyecto de Extracción y Visualización de Datos de Transfermarkt
 
+![](src/ejemplo_suda.jpg)
+
 Este proyecto demuestra un flujo de trabajo completo para la extracción, almacenamiento y visualización de datos de fútbol del sitio web Transfermarkt.
 
 ## Descripción General
