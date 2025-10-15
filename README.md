@@ -24,6 +24,8 @@ El proyecto se compone de los siguientes elementos:
 *   **PostgreSQL**: Una base de datos relacional que almacena los datos extraídos de Transfermarkt.
 *   **Power BI**: Una herramienta de inteligencia de negocios que se conecta a la base de datos PostgreSQL para visualizar los datos a través de informes y dashboards interactivos.
 
+![](src/ejemplo_uru.jpg)
+
 ## Flujo de Trabajo
 
 1.  **Inicio del Proceso**: El flujo de trabajo se inicia manualmente o de forma programada en n8n.
@@ -31,6 +33,10 @@ El proyecto se compone de los siguientes elementos:
 3.  **Procesamiento**: Los datos recibidos de la API se procesan y transforman en n8n para adaptarlos al esquema de la base de datos.
 4.  **Carga**: Los datos transformados se cargan en la base de datos PostgreSQL.
 5.  **Visualización**: Los usuarios pueden acceder a los dashboards de Power BI, que se actualizan automáticamente con los nuevos datos de la base de datos, para explorar y analizar la información.
+
+![](src/wf_1.jpg)
+
+![](src/wf_2.jpg)
 
 ## Cómo Empezar
 
